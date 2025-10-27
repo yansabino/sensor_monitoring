@@ -6,6 +6,8 @@ __pycache__/
 # C extensions
 *.so
 
+sensor_readings.db
+
 # Distribution / packaging
 .Python
 build/
