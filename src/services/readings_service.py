@@ -13,7 +13,7 @@ class ReadingsService:
                 return {"error": "A parameter is missing"}, 400
             
             new_reading = self.repo.insert_reading(data)
-            return {"message": "Reading created successfully"}, 200
+            return {"message": "Reading created successfully"}, 201
         except Exception as e:
             return {"error": e}, 500
     
