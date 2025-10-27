@@ -1,9 +1,9 @@
 from flask import Flask
-from db.sqlite_connect import SQLiteConnectionFactory, init_db
-from repositories.readings_repository import ReadingsRepository
-from services.readings_service import ReadingsService
-from controllers.readings_controller import ReadingsController
-from routes.readings_routes import readings_blueprint 
+from src.db.sqlite_connect import SQLiteConnectionFactory, init_db
+from src.repositories.readings_repository import ReadingsRepository
+from src.services.readings_service import ReadingsService
+from src.controllers.readings_controller import ReadingsController
+from src.routes.readings_routes import readings_blueprint 
 
 def create_app(db_path: str = "sensor_readings.db") -> Flask:
     app = Flask(__name__)
