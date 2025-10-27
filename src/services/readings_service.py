@@ -32,3 +32,20 @@ class ReadingsService:
             return readings, 200
         except Exception as e:
             return {"error": e}, 500
+    
+    def fetch_stats_from_sensor_readings(self, sensorId:str):
+        try:
+            if not sensorId:
+                return {"error": "sensorId param is missing!"}, 400
+            
+            sensor_exists_on_readings = self.repo.has_sensor_readings(sensorId)
+
+            if not sensor_exists_on_readings:
+                return {"error": "sensorId not found!"}, 404
+            
+            stats_from_sensors = self.repo.fetch_stats_from_sensor_readings(sensorId)
+
+            return stats_from_sensors, 200
+        except Exception as e:
+            return {"error": e}, 500
+

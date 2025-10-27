@@ -15,3 +15,7 @@ class ReadingsController:
 
         data, status = self.service.fetch_readings(sensorId, start, end)
         return jsonify(data), status
+
+    def fetch_stats_from_sensor_readings(self, sensorId: str):
+        stats, status = self.service.fetch_stats_from_sensor_readings(sensorId)
+        return stats, status
