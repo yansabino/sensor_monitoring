@@ -55,7 +55,7 @@ The service exposes the following endpoints (registered in `src/routes/readings_
   "sensorId": "sensor-1",
   "temperature": 22.5,
   "humidity": 40.2,
-  "timestamp": "2025-10-27T12:00:00Z"
+  "timestamp": "2025-10-27"
 }
 ```
 
