@@ -20,7 +20,7 @@ class ReadingsRepository:
         
         with self.conn_factory.get_connection() as conn:
             cursor = conn.cursor()
-            check_sensor_id = cursor.execute(query, param)
+            cursor.execute(query, param)
             exists = cursor.fetchone()[0]
 
             return exists == 1
