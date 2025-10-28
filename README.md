@@ -66,6 +66,15 @@ The service exposes the following endpoints (registered in `src/routes/readings_
 
 - GET /stats/<sensorId>
   - Returns aggregated statistics for the sensor (avg temperature/humidity, max/min temperature).
+```
+{
+ "sensor_id": "abc123",
+ "avg_temperature": 27.8,
+ "avg_humidity": 63.5,
+ "max_temperature": 30.1,
+ "min_temperature": 25.0
+}
+```
 
 
 ## Database
